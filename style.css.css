@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-clr: #ffffff;
+    --secondary-clr: black;
+    --acent-clr: #f4f4f4;
+
+    --text-grey: hsl(0, 0%, 30%);
+    --text-dark: black;
+
+    --side-width: 25vw;
+    --head-heigth: 130px;
+}
+
+body {
+    background-color: var(--primary-clr);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--text-dark);
+}
+
+p {
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: var(--text-grey);
+    text-transform: none;
+}
+
+a {
+    color: var(--text-grey);
+    font-weight: 600;
+}
+
+
+.title {
+    border-bottom: 2px solid;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+header {
+    width: 100%;
+    max-width: 600px;
+    height: var(--head-heigth);
+    position: absolute;
+    top: 1.5rem;
+    left: calc(var(--side-width) / 1.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    border: 1px solid;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-clr);
+}
+
+header p {
+    font-size: 14px;
+}
+
+
+main {
+    --x-top: calc(var(--head-heigth) + 50px);
+    display: grid;
+    grid-template-columns: var(--side-width) 1fr;
+}
+
+main aside {
+    background-color: var(--acent-clr);
+    padding: 1rem;
+    padding-top: var(--x-top);
+}
+
+main section {
+    max-width: 900px;
+    padding-inline: 1.25rem;
+    padding-top: var(--x-top);
+}
+
+.card {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+}
+
+.card .body .item h1, .card .body .item h2, .card .body .item h3,
+.card .body .item h4, .card .body .item h5, .card .body .item h6 {
+    text-transform: none;
+}
+
+.card ul {
+    margin-left: 1.5rem;
+}
+
+.card ul li {
+    color: inherit;
+    font-weight: inherit;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--text-grey);
+}
+
+.card .body .item {
+    margin-bottom: 12px;
+}
+
+.card .body .item .title {
+    border: 0;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.card .body .item p {
+    margin-bottom: 5px;
+}
+
+.card .body .item > div {
+    margin-bottom: 5px;
+}
+
+.skill_lvl {
+    --wh: 8px;
+    position: relative;
+    top: -8px;
+}
+
+.skill_lvl .circle, .skill_lvl .circle-fill {
+    display: inline-block;
+    width: var(--wh);
+    height: var(--wh);
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.skill_lvl .circle-fill {
+    background-color: var(--text-dark);
+}
